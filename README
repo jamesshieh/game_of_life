@@ -1,3 +1,9 @@
-Run main.rb.
+Simple game of life in ruby and gosu/chingu
 
-Size can be changed by passing the dimensions to a new environment.
+Requires Gosu and Chingu.
+
+ruby main.rb
+
+Controls:
+Left click to add cells, right click to remove.
+Space to start and stop simulation.
