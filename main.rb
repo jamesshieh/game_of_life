@@ -3,7 +3,7 @@
 require './life'
 require 'chingu'
 include Gosu
-  
+
 CELL_SIZE = 5
 
 class Game < Chingu::Window
@@ -20,7 +20,7 @@ class Master < Chingu::GameState
   def initialize
     super
   end
- 
+
   def draw_grid
     $universe.board.each_with_index do |row, y|
       row.each_with_index do |cell, x|
@@ -56,18 +56,18 @@ class Draw < Master
     self.input =  {   :escape => :exit,
                       :space => Sim,
                       :left_mouse_button => :add_rect,
-                      :right_mouse_button => :remove_rect                    
+                      :right_mouse_button => :remove_rect
                   }
   end
 
   def add_rect
-    $universe.alive!($window.mouse_x/CELL_SIZE,$window.mouse_y/CELL_SIZE) 
+    $universe.alive!($window.mouse_x/CELL_SIZE,$window.mouse_y/CELL_SIZE)
   end
 
   def remove_rect
     $universe.dead!($window.mouse_x/CELL_SIZE,$window.mouse_y/CELL_SIZE)
   end
-  
+
   def draw_cursor
     $window.fill_rect([$window.mouse_x, $window.mouse_y, CELL_SIZE, CELL_SIZE], Color::RED, 0)
   end
@@ -101,7 +101,7 @@ class Sim < Master
     super
     draw_grid
   end
-  
+
   def update
     super
     $universe.step
