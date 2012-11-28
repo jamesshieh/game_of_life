@@ -51,9 +51,7 @@ class Environment
   end
 
   def find_neighbors(x, y)
-    x = x % (@x-1)
-    y = y % (@y-1)
-    neighbors = @board[y-1][x-1] + @board[y-1][x] + @board[y-1][x+1] + @board[y][x-1] + @board[y][x+1] + @board[y+1][x-1] + @board[y+1][x] + @board[y+1][x+1]
+    neighbors = @board[y-1][x-1] + @board[y-1][x] + @board[y-1][(x+1) % @x] + @board[y][x-1] + @board[y][(x+1) % @x] + @board[(y+1) % @y][x-1] + @board[(y+1) % @y][x] + @board[(y+1) % @y][(x+1) % @x]
 #    neighbors = 0
 #    for i in (x-1..x+1)
 #      for j in (y-1..y+1)
