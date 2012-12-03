@@ -1,10 +1,11 @@
 #!/usr/bin/env ruby
 
-require './life'
+$LOAD_PATH.unshift(File.expand_path(File.join(File.dirname(__FILE__),".." , "lib")))
+require 'life'
 require 'chingu'
 include Gosu
 
-CELL_SIZE = 5
+CELL_SIZE = 8
 
 class Game < Chingu::Window
   def initialize
@@ -43,7 +44,7 @@ class Menu < Chingu::GameState
     super
     @title = Chingu::Text.create(:text => "Welcome to the Game Of Life!", :x => 300, :y => 300, :size => 30)
     @prompt = Chingu::Text.create(:text => "Press space to begin.", :x => 800, :y => 300, :size => 30)
-    self.input = { :space => Draw }
+    self.input = { :space => Draw, :escape => :exit }
   end
 end
 
@@ -105,7 +106,7 @@ class Sim < Master
   def update
     super
     $universe.step
-    $window.caption =  "FPS: #{$window.fps}, Game_Objects: #{$window.game_objects}"
+    $window.caption =  "FPS: #{$window.fps}"
   end
 end
 

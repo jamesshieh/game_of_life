@@ -1,0 +1,25 @@
+Conway's Game of Life in Ruby/Gosu
+==================================
+
+An implementation of Conway's game of life using the Gosu game framework in
+Ruby.
+
+### To Run
+
+    bundle install
+    bin/main
+
+### Controls:
+
+Space - Toggle simulation  
+Left Click - Add cell  
+Right Click - Remove cell  
+
+The screen wraps around the edges.
+
+Screenshot:
+
+![Screen shot of the game of life](/screenshots/screenshot1.jpg)
+
+Enjoy!
+

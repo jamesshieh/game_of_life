@@ -1,9 +1,0 @@
-Simple game of life in ruby and gosu/chingu
-
-Requires Gosu and Chingu.
-
-ruby main.rb
-
-Controls:
-Left click to add cells, right click to remove.
-Space to start and stop simulation.
