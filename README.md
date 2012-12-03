@@ -19,7 +19,8 @@ The screen wraps around the edges.
 
 Screenshot:
 
-![Screen shot of the game of life](/screenshots/screenshot1.jpg)
+![Screen shot of the game of
+life](https://raw.github.com/jamesshieh/game_of_life/master/screenshots/screenshot1.jpg)
 
 Enjoy!
 
