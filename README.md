@@ -9,6 +9,8 @@ Ruby.
     bundle install
     bin/main
 
+Please see https://github.com/jlnr/gosu/wiki for gosu dependencies based on your OS.  
+
 ### Controls:
 
 Space - Toggle simulation  
